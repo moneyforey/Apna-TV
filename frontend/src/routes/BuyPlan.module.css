@@ -1,0 +1,52 @@
+.flexitems{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    gap: .25rem;
+}
+
+.hd{
+    font-family: NotoSansBold, sans-serif;
+font-style: normal;
+
+font-weight: 700;
+
+font-size: 24px;
+
+line-height: 32px;
+
+color: #333333;
+
+}
+
+.tx{
+    font-family: 
+    NotoSansRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue";
+    font-style: normal;
+    
+    font-weight: 600;
+    
+    font-size: 14px;
+    
+    line-height: 25px;
+    
+   color: #333333;
+    
+}
+
+.yearoffrUpprbx{
+    border: solid 1px pink;
+    padding: 20px;
+    margin: 100px;
+    background-image: linear-gradient(#fde5e8 ,#f6e5fc);
+}
+
+.tglmtoffr{
+    background-color: #2f80ed;
+    color: white;
+}
+
+.tgperoffr{
+    border: 1px solid #fe3bb1 ;
+    color: #fe3bb1 ;
+}
