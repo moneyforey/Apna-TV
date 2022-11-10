@@ -90,7 +90,7 @@ const Navbar = () => {
             <MenuList
               bg="black"
               pl="20px"
-              colorScheme="teal"
+              colorscheme="teal"
               onMouseEnter={onOpen}
               onMouseLeave={onClose}
             >
@@ -124,7 +124,7 @@ const Navbar = () => {
         </Box>
 
         <Box>
-          <Button colorScheme="white" variant="outline">
+          <Button colorscheme="white" variant="outline">
             LOGIN
           </Button>
         </Box>
