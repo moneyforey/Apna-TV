@@ -4,18 +4,23 @@ import {  BsApple } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const Login = ()=>{
+   
+    const [email, setEmail] = useState("");
+    const  [password, setPassword] = useState("");
+        
 
 
+    const {error, loading, token}  = useSelector((store)=> store.auth)
+   
     return(
-        <>
-              
-
-
-            <Box bg="#0f0617" color="white" h= "100vh" >
+    <>
+            <Box bg="#0f0617" color="white" >
             <div> 
-                    <AiOutlineClose style={{position: "fixed", top: "20px" , right: "20px", cursor: "pointer"}} />
+                   <Link to="/"> <AiOutlineClose style={{position: "fixed", top: "20px" , right: "20px", cursor: "pointer"}} /></Link>
                    </div>
                   
                         <Box p="20px">
@@ -43,7 +48,11 @@ export const Login = ()=>{
                              </Box>
                               <Box mt="30px" >
                                 <FormLabel textAlign={"center"}>Email ID Or Mobile Number</FormLabel>
-                                <Input focusBorderColor="none"   focusBorderTop="0" focusBorderLeft="0" focusBorderRight="0"  borderTop={"0"} borderLeft="0" borderRadius={"0"} borderRight="0" type="text" w="25%" required />
+                                <Input placeholder='Email' mb="20px" onChange={(e)=> setEmail(e.target.value)} value={email} focusBorderColor="none" borderTop={"0"} borderLeft="0" borderRadius={"0"} borderRight="0" type="text" w="25%" required />
+                                <br />
+                                {
+                                   email.split("").includes("@")   &&  <Input placeholder='Password' onChange={(e)=> setPassword(e.target.value)} value={password} focusBorderColor="none"   borderTop={"0"} borderLeft="0" borderRadius={"0"} borderRight="0" type="text" w="25%" required />
+                                }
                                 <Box mt="35px" mb="25px">
                                     <Text color="#a785ff">Forget Password ?</Text>
                                 </Box>
@@ -59,6 +68,6 @@ export const Login = ()=>{
                             </Box> 
          
             </Box>
-        </>
+      </>
     )
 }
