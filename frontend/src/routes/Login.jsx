@@ -1,4 +1,4 @@
-import {Box, Text, Flex, Input, Button, Image, FormLabel, border}  from '@chakra-ui/react'
+import {Box, Text, Flex, Input, Button, Image, FormLabel, border}  from '@chakra-ui/react';
 import "./login.css"
 import {  BsApple } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";

@@ -124,12 +124,13 @@ const Navbar = () => {
         </Box>
 
         <Box>
-          <Button colorScheme="white" variant="outline">
-            LOGIN
+          <Button  colorScheme="white" variant="outline">
+            <Link to="/login"> LOGIN</Link>
+           
           </Button>
         </Box>
         <Box className={styles.roundBtn}>
-          <Link to={"/"}>BUY PLANS</Link>
+          <Link to="/buy">BUY PLANS</Link>
         </Box>
         <Box>
           <Flex height="100vh" align="center" justifyContent="center">
