@@ -1,21 +1,53 @@
 import {Box, Text, Flex, Input, Button, Image, FormLabel, border}  from '@chakra-ui/react';
-import "./login.css"
 import {  BsApple } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineClose } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { loginUser } from '../store/auth/auth.action';
+import { useEffect } from 'react';
 
 export const Login = ()=>{
-   
+    const dispatch  = useDispatch();
     const [email, setEmail] = useState("");
     const  [password, setPassword] = useState("");
-        
+     const navigate = useNavigate()   
 
 
-    const {error, loading, token}  = useSelector((store)=> store.auth)
+    const {token, loading, error}  = useSelector((store)=> store.auth)
+      // console.log(token, loading, error)
+    const handleLogin = ()=>{
+             if(email && password){
+              let user = {
+                email : email,
+                password: password
+              }
+              dispatch(loginUser(user));
+
+             
+             }else{
+              alert("Kindly Put valid Inupt")
+             }
+               
+               
+    }
    
+      if(token){
+        // console.log(token, "token")
+        navigate("/")
+      }
+    
+       useEffect(()=>{
+        if(error){
+    
+          alert("wrong credential")
+          
+    }
+     
+       }, [error])  
+
+
     return(
     <>
             <Box bg="#0f0617" color="white" >
@@ -56,7 +88,7 @@ export const Login = ()=>{
                                 <Box mt="35px" mb="25px">
                                     <Text color="#a785ff">Forget Password ?</Text>
                                 </Box>
-                                <Button w="315px"  backgroundColor={"#8230c6"} >
+                                <Button onClick={handleLogin} w="315px"  backgroundColor={"#8230c6"} >
                                     Login
                                 </Button>
                                 <Box mt="25px">
