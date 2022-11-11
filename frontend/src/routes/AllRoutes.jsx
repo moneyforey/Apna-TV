@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import Footer from "../components/Footer";
 
 import Navbar from "../components/Navbar";
 
@@ -12,10 +13,11 @@ const AllRoutes=()=>{
     return(
         <Routes>
         <Route path="/" element={
-            <>
+            <div>
             <Navbar />
             <Home />
-            </>
+            <Footer />
+            </div>
 
         } />
         <Route path="/login" element={<Login />} />

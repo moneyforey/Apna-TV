@@ -12,8 +12,12 @@ import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { DragHandleIcon, HamburgerIcon } from "@chakra-ui/icons";
 import styles from "./Navbar.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../store/auth/auth.action";
 
 const Navbar = () => {
+  const loginDetail = useSelector((store)=>store.auth.token)
+  const dispatch =  useDispatch()
   const googleTranslateElementInit = () => {
     new window.google.translate.TranslateElement(
       {
@@ -127,9 +131,9 @@ const Navbar = () => {
         <Box>
 
           <Button  colorScheme="white" variant="outline">
-            <Link to="/login"> LOGIN</Link>
-           
-
+          { 
+              loginDetail ? <Text  onClick={()=> dispatch(logout())}>Logout</Text>:<Link to="/login">Log in</Link>
+          }
           </Button>
         </Box>
         <Box className={styles.roundBtn}>

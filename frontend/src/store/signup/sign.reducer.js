@@ -1,9 +1,11 @@
+import { Auth_Signup_Error, Auth_Signup_Loading, Auth_Signup_Success } from "./sign.type"
+
 let initialState = {
     loading : false,
     error: false,
-    token: ""
+    
+    
 }
-
 
 export const authSignupReducer = (state = initialState, {type, payload})=>{
    
@@ -20,7 +22,6 @@ export const authSignupReducer = (state = initialState, {type, payload})=>{
          return {
              ...state,
              loading: false,
-             token : payload.token,
              error:  false   
          }
      }
