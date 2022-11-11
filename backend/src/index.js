@@ -20,7 +20,7 @@ app.use('/topratedmovies',topratedmovieRoute)
 
 
 app.get("/", (req, res)=>{
-    res.send("Hello World is here")
+    res.sendFile(__dirname + '/todo.txt')
 })
 
 
