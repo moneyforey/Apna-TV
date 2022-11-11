@@ -1,0 +1,21 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.Images {
+  height: 100%;
+  width: 100%;
+  cursor: pointer !important;
+}
+.boxes {
+  height: 400px;
+  width: 95%;
+}
+.dot {
+  background: black;
+  color: red;
+}
+
+.slider-wrapper {
+  height: 50%;
+}
