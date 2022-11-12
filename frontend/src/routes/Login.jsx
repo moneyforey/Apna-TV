@@ -16,7 +16,7 @@ export const Login = ()=>{
 
 
     const {token, loading, error}  = useSelector((store)=> store.auth)
-      // console.log(token, loading, error)
+      console.log(token, loading, error)
     const handleLogin = ()=>{
              if(email && password){
               let user = {
