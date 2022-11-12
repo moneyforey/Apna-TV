@@ -6,7 +6,7 @@ const userRoute = express.Router();
 const sceretkey = "qwertyuiop"
 
 userRoute.get("/", (req, res)=>{
-    res.send("hello ")
+    res.send("hello")
 })
 
 

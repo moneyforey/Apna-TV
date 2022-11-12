@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 import BuyPlans from "./BuyPlan";
+import DetailPage from "./DetailPage";
 
 import Home from "./Home";
 import { Login } from "./Login";
@@ -20,6 +21,7 @@ const AllRoutes=()=>{
             </div>
 
         } />
+        <Route path='/' element={<DetailPage/>}/>      
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<SignUP />} />
         <Route path="/buy" element={<BuyPlans />} />

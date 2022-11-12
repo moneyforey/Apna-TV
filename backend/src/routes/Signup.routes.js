@@ -13,16 +13,16 @@ signUpRoute.post("/", async(req, res)=>{
           let user = await User.findOne({email: email});
            if(!user){
             console.log("done")
-            let data= new User(req.body);
+            let data = new User(req.body);
             data.password = await bcrypt.hash(password, 10)
             await data.save();
-             res.send({
+              return res.send({
                 data: data, 
                 message :  "User Register SuccessFully"});
-             return
+             
             }
            
-          res.status(401).send({
+          return res.status(401).send({
             error: "User Already Exist"
           })
 

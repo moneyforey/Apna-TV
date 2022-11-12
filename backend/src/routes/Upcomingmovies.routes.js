@@ -10,4 +10,19 @@ const bcrypt = require("bcrypt");
  })
 
 
+ app.get("/:id",async(req,res)=>{
+
+    let {id}=req.params;
+  
+    try {
+        let movie = await Upcomingmovie.findById(id)
+        res.status(200).send(movie)
+    
+    } catch (error) {
+        console.log(error);
+        res.status(401).send(error.message)
+    }
+ })
+
+
 module.exports = app;
