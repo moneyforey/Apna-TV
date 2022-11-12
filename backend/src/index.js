@@ -1,22 +1,22 @@
 const express = require("express");
-const  dbConnect  = require("./config/dbConnext");
-const signUpRoute = require("./routes/Signup.routes");
+const cors=require("cors")
+const dbConnect  = require("./config/dbConnext");
 const userRoute = require("./routes/User.routes");
 const popularmovieRoute = require('./routes/Popularmovies.routes');
 const upcomingmovieRoute = require('./routes/Upcomingmovies.routes');
 const topratedmovieRoute = require('./routes/Upcomingmovies.routes');
-const cors = require('cors');
+const adminRoute=require("../src/routes/admin.router")
 const app = express();
 
 app.use(cors());
 app.use(express.urlencoded({extended: true}))
 app.use(express.json());
-
-app.use("/login", userRoute);
-app.use("/register", signUpRoute);
+app.use(cors())
+app.use("/login", userRoute)
 app.use('/popularmovies',popularmovieRoute)
 app.use('/upcomingmovies',upcomingmovieRoute)
 app.use('/topratedmovies',topratedmovieRoute)
+app.use("/movieadmin",adminRoute)
 
 
 app.get("/", (req, res)=>{
@@ -28,5 +28,5 @@ app.get("/", (req, res)=>{
 app.listen(8080, async()=>{
     await dbConnect();
 
-    console.log("http://localhost:8080")
+    console.log(" connected 8080")
 })
