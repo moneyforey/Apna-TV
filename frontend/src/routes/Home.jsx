@@ -1,9 +1,10 @@
 import styles from "./Home.module.css";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Cards from "../components/Home/Cards";
 const Home = () => {
   return (
-    <div>
+    <div className={styles.mainBody}>
       <Carousel
         showArrows={true}
         className={styles.cour}
@@ -15,7 +16,7 @@ const Home = () => {
         emulateTouch
         thumbWidth={100}
         interval={1500}
-        transitionTime={1500}
+        transitionTime={2000}
         useKeyboardArrows
         stopOnHover
         showThumbs={false}
@@ -50,6 +51,7 @@ const Home = () => {
           <img src="https://akamaividz2.zee5.com/image/upload/w_1188,h_475,c_scale,f_webp,q_auto:eco/resources/0-0-1z5227565/cover/1920x7704ce388d5a6e74dac8ad9255657da588f.jpg" />
         </div>
       </Carousel>
+      <Cards />
     </div>
   );
 };
