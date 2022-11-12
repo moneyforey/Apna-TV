@@ -28,5 +28,5 @@ app.get("/", (req, res)=>{
 app.listen(8080, async()=>{
     await dbConnect();
 
-    console.log("http://localhost:8080")
+    console.log(" connected 8080")
 })
