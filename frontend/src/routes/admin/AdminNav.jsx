@@ -14,7 +14,10 @@ const AdminNav = () => {
         <Text fontSize={"xl"} fontWeight="semibold" color={"blue.500"} >All Movies</Text>
         
         </Link>
-        <Text fontSize={"xl"} fontWeight="semibold" color={"blue.500"} >Add Movies</Text>
+        <Link to={"admin/addMovie"}>
+         <Text fontSize={"xl"} fontWeight="semibold" color={"blue.500"} >Add Movies</Text>
+        </Link>
+       
 
     </Flex>
     
