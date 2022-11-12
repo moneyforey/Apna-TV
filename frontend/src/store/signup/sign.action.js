@@ -16,7 +16,7 @@ import { Auth_Signup_Loading, Auth_Signup_Success } from "./sign.type";
       return(res.data)
           
       }catch(e){
-       
+           console.log(e.message);
            alert("User Already Exist")
            
       }

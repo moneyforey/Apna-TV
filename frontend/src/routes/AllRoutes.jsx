@@ -18,10 +18,11 @@ const AllRoutes = () => {
       <Route
         path="/"
         element={
-          <>
+          <div>
             <Navbar />
             <Home />
-          </>
+            <Footer />
+          </div>
         }
       />
       <Route path="/login" element={<Login />} />
@@ -29,7 +30,7 @@ const AllRoutes = () => {
       <Route path="/buy" element={<BuyPlans />} />
       <Route path="/admin" element={<Admin />}>
         <Route path="/admin/allUsers" element={<AdminUsers />} />
-        <Route index   element={<AdminMovies />} />
+        {/* <Route index   element={<AdminMovies />} /> */}
       </Route>
     </Routes>
   );
