@@ -7,6 +7,7 @@ import AdminMovies from "./admin/AdminMovies";
 import AdminUsers from "./admin/AdminUsers";
 
 import BuyPlans from "./BuyPlan";
+import DetailPage from "./DetailPage";
 
 import Home from "./Home";
 import { Login } from "./Login";
@@ -35,4 +36,10 @@ const AllRoutes = () => {
   );
 };
 
+
+     
+        
+
+
 export default AllRoutes;
+
