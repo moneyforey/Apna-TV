@@ -1,6 +1,7 @@
 const express = require("express");
 const dbConnect = require("./config/dbConnext");
 const userRoute = require("./routes/User.routes");
+const signUpRoute = require("./routes/Signup.routes");
 const popularmovieRoute = require("./routes/Popularmovies.routes");
 const upcomingmovieRoute = require("./routes/Upcomingmovies.routes");
 const topratedmovieRoute = require("./routes/Upcomingmovies.routes");
@@ -13,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use("/login", userRoute);
+app.use("/register", signUpRoute);
 app.use("/popularmovies", popularmovieRoute);
 app.use("/upcomingmovies", upcomingmovieRoute);
 app.use("/topratedmovies", topratedmovieRoute);

@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
-
 import Navbar from "../components/Navbar";
 import Admin from "./admin/Admin";
 import AdminAdd from "./admin/AdminAdd";
@@ -23,21 +22,24 @@ const AllRoutes = () => {
       <Route
         path="/"
         element={
-          <>
-<<<<<<< HEAD
-=======
+          <div>
             <Navbar />
->>>>>>> main
-            <Home />
-          </>
+             <Home />
+             <Footer />
+            </div>
         }
       />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<SignUP />} />
-      <Route path="/buy" element={<BuyPlans />} />
-<<<<<<< HEAD
-=======
-      <Route path="/admin" element={<Admin />}>
+      <Route path="/buy" element={
+        <div>
+          <Navbar/>
+          <BuyPlans />
+          <Footer />
+        </div>
+      } />
+
+        <Route path="/admin" element={<Admin />}>
         <Route path="/admin/allUsers" element={<AdminUsers />} />
         <Route path="/admin/:id" element={<AdminSingle/>} />
         <Route path="admin/addMovie" element={<AdminAdd/>} />
@@ -45,19 +47,8 @@ const AllRoutes = () => {
         <Route path="/admin/update/:id" element={<AdminAdd/>}/>
         <Route index   element={<AdminMovies />} />
       </Route>
->>>>>>> main
     </Routes>
   );
 };
 
-<<<<<<< HEAD
 export default AllRoutes;
-=======
-
-     
-        
-
-
-export default AllRoutes;
-
->>>>>>> main

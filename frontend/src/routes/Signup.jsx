@@ -20,7 +20,7 @@ import { signUp } from '../store/signup/sign.action';
         password: "",
     })
  
-    console.log(auth)
+    // console.log(auth)
 
     const handleChange = (e)=>{
    
@@ -32,7 +32,7 @@ import { signUp } from '../store/signup/sign.action';
     }
  
     const handleSignUp = ()=>{
-          console.log(userSignup)
+          // console.log(userSignup)
          dispatch(signUp(userSignup))
         }
 

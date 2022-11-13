@@ -13,7 +13,7 @@ import axios from "axios";
            dispatch({type: Auth_Success, payload: res.data})
           return res.data
       } catch(e){
-        console.log(e.message);
+        // console.log(e.message);
         dispatch({type: Auth_Error});
       }  
     
