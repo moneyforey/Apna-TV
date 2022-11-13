@@ -6,7 +6,7 @@ import { Auth_Signup_Loading, Auth_Signup_Success } from "./sign.type";
       dispatch({type: Auth_Signup_Loading})
       try{
         let res  = await axios({
-            url: `http://localhost:8080/register`,
+            url: `https://zeebackend-production.up.railway.app/register`,
             method: "post",
             data: creds 
         });

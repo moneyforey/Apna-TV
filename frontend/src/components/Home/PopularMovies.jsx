@@ -12,7 +12,7 @@ function PopularMovies() {
   const [data, setData] = useState([]);
 
   const getPopularmovies = async () => {
-    let res = await axios.get("http://localhost:8080/popularmovies");
+    let res = await axios.get("https://zeebackend-production.up.railway.app/popularmovies");
     console.log(res.data);
     setData(res.data);
   };

@@ -1,6 +1,7 @@
 const express = require("express");
-const Upcomingmovie = require('../model/Popularmovies.schema')
+
 const bcrypt = require("bcrypt");
+const Upcomingmovie = require("../model/Upcomingmovies.schema");
 
  const app = express.Router();
 
@@ -9,7 +10,7 @@ const bcrypt = require("bcrypt");
          res.send(data);
  })
 
-
+ 
  app.get("/:id",async(req,res)=>{
 
     let {id}=req.params;

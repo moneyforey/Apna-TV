@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { PrivateRoute } from "../components/PrivateRoute";
 import Admin from "./admin/Admin";
 import AdminAdd from "./admin/AdminAdd";
 import AdminMovies from "./admin/AdminMovies";
@@ -35,26 +36,33 @@ const AllRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<SignUP />} />
       <Route path="/buy" element={
-        <div>
+       <PrivateRoute >  
+         <div>
           <Navbar/>
           <BuyPlans />
           <Footer />
-        </div>
+       </div>
+     </PrivateRoute>
       } />
 
       <Route path="/detailpop/:id" element={
-        <div>
-          <Navbar/>
-          <DetailPop/>
-          <Footer/>
+          <PrivateRoute>
+             <div>
+              <Navbar/>
+              <DetailPop/>
+              <Footer/>
         </div>
+          </PrivateRoute>
+
       }/>
       <Route path="/detailtop/:id" element={
-        <div>
-          <Navbar/>
-          <DetailTop/>
-          <Footer/>
+         <PrivateRoute>
+            <div>
+              <Navbar/>
+              <DetailTop/>
+              <Footer/>
         </div>
+         </PrivateRoute>
       }/>
 
 <Route path="/detailup/:id" element={

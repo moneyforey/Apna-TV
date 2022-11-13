@@ -12,7 +12,7 @@ function UpcomingMobies() {
   const [data, setData] = useState([]);
 
   const getUpcomingMobies = async () => {
-    let res = await axios.get("http://localhost:8080/upcomingmovies");
+    let res = await axios.get("https://zeebackend-production.up.railway.app/upcomingmovies");
     console.log(res.data);
     setData(res.data);
   };

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import TopRated from "../components/Home/TopRated";
 import VideoApp from "../components/VideoPlayer";
-import {Box,Flex,Text,Heading,Stack} from "@chakra-ui/react";
+import {Box,Flex,Text,Heading,Stack, Image} from "@chakra-ui/react";
 import { FaImdb } from "react-icons/fa";
 import styles from "./Detail.module.css"
 const DetailTop=()=>{
@@ -12,7 +12,7 @@ const DetailTop=()=>{
     const {id} = params;
 
     useEffect(()=>{
-        axios(`http://localhost:8080/topratedmovies/${id}`)
+        axios(`https://zeebackend-production.up.railway.app/topratedmovies/${id}`)
         .then((res)=>{
         console.log(res.data)    
         setData(res.data)
@@ -24,9 +24,10 @@ const DetailTop=()=>{
        <Box bg="#000000">
       <Flex className={styles.flxvd}>
       <VideoApp/>
-      <Stack className={styles.bxtxt}>
+      <Stack m={"auto"} textAlign={"center"} className={styles.bxtxt}>
       <Heading>{data.title}</Heading>
-        <Text>{data.overview}</Text>
+      <Image className={styles.cover} ml={"255px"} w="65%" h="200px" objectFit={"contain"}  alt={data.title} src={data.poster_path} />
+      <p className={styles.overview}>{data.overview}</p>
         <Flex className={styles.flxrd}>
             <Text>Released on : {data.release_date}</Text>
             <Flex className={styles.flxim}> <FaImdb/>

@@ -1,7 +1,8 @@
 .bxtxt{
     width: 50%;
     color: aliceblue;
-    font-family: NotoSansBold, sans-serif;;
+    font-family: NotoSansBold, sans-serif;
+   
 }
 .flxvd{
   padding: 1rem;
@@ -20,4 +21,16 @@
 
 .flxmn{
     align-items: center;
+}
+
+.overview{
+    width: 70%;
+    height:  50px;
+    margin: auto !important;
+    overflow: hidden;
+}
+
+.cover{
+    margin:  auto !important;
+    padding: 5px;
 }

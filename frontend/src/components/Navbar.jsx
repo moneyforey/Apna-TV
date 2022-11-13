@@ -7,7 +7,7 @@ import {
   MenuList,
   useDisclosure,
 } from "@chakra-ui/react";
-
+import logo from "../util/AT.png"
 import { Box, Button, HStack, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { DragHandleIcon, HamburgerIcon } from "@chakra-ui/icons";
@@ -57,7 +57,7 @@ const Navbar = () => {
         <Link to="/">
           <Image
             className={styles.logo}
-            src="https://www.zee5.com/images/ZEE5_logo.svg?ver=2.52.50"
+            src={logo}
             alt="logo"
           />
         </Link>
@@ -98,15 +98,16 @@ const Navbar = () => {
               colorscheme="teal"
               onMouseEnter={onOpen}
               onMouseLeave={onClose}
+             
             >
-              <MenuItem>Eduauraa</MenuItem>
-              <MenuItem>Premium</MenuItem>
-              <MenuItem>Live TV</MenuItem>
-              <MenuItem>Music</MenuItem>
-              <MenuItem>Rent</MenuItem>
-              <MenuItem>Kids</MenuItem>
-              <MenuItem>Video</MenuItem>
-              <MenuItem>Channel</MenuItem>
+              <MenuItem  _hover={{color: "black", backgroundColor: "white"}}>Eduauraa</MenuItem>
+              <MenuItem _hover={{color: "black", backgroundColor: "white"}}>Premium</MenuItem>
+              <MenuItem _hover={{color: "black", backgroundColor: "white"}}>Live TV</MenuItem>
+              <MenuItem _hover={{color: "black", backgroundColor: "white"}}>Music</MenuItem>
+              <MenuItem _hover={{color: "black", backgroundColor: "white"}}>Rent</MenuItem>
+              <MenuItem _hover={{color: "black", backgroundColor: "white"}}>Kids</MenuItem>
+              <MenuItem _hover={{color: "black", backgroundColor: "white"}}>Video</MenuItem>
+              <MenuItem _hover={{color: "black", backgroundColor: "white"}}>Channel</MenuItem>
             </MenuList>
           </Menu>
         </Flex>
@@ -141,7 +142,7 @@ const Navbar = () => {
         </Box>
         <Box>
           <Flex height="100vh" align="center" justifyContent="center">
-            <Menu isOpen1={isOpen1}>
+            <Menu  zIndex="25" isOpen1={isOpen1}>
               <MenuButton onMouseEnter={onOpen1} onMouseLeave={onClose1}>
                 <HamburgerIcon w={8} h={6} />
               </MenuButton>
@@ -153,48 +154,50 @@ const Navbar = () => {
                 mr="-32px"
                 w="400px"
                 h="650px"
+                zIndex="25" 
                 // colorScheme="teal"
                 onMouseEnter={onOpen1}
                 onMouseLeave={onClose1}
+               
               >
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Home
                 </MenuItem>
                 <hr />
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Explores
                 </MenuItem>
                 <hr />
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Plans
                 </MenuItem>
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Buy Plans
                 </MenuItem>
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Have a Prepaid Code ?
                 </MenuItem>
                 <hr />
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Settings
                 </MenuItem>
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Reset Settings to Default
                 </MenuItem>
                 <hr />
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Info
                 </MenuItem>
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   About Us
                 </MenuItem>
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Help Center
                 </MenuItem>
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Terms Of Use
                 </MenuItem>
-                <MenuItem fontWeight="bold" m="10px">
+                <MenuItem _hover={{color: "black", backgroundColor: "white"}} fontWeight="bold" m="10px">
                   Privacy Policy
                 </MenuItem>
               </MenuList>

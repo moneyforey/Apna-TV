@@ -12,7 +12,7 @@ function TopRated() {
   const [data, setData] = useState([]);
 
   const getTopratedmovies = async () => {
-    let res = await axios.get("http://localhost:8080/topratedmovies");
+    let res = await axios.get("https://zeebackend-production.up.railway.app/topratedmovies");
     console.log(res.data);
     setData(res.data);
   };

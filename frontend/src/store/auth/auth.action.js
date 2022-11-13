@@ -6,7 +6,7 @@ import axios from "axios";
       dispatch({type: Auth_Loading});
       try{
          let res = await axios({
-            url: "http://localhost:8080/login",
+            url: "https://zeebackend-production.up.railway.app/login",
             method: "post",
             data: creds
           });

@@ -1,6 +1,7 @@
 const express = require("express");
-const Topratedmovie = require('../model/Popularmovies.schema')
+
 const bcrypt = require("bcrypt");
+const Topratedmovie = require("../model/Topratedmovies.schema");
 
  const app = express.Router();
 
@@ -8,7 +9,6 @@ const bcrypt = require("bcrypt");
          let data = await Topratedmovie.find();
          res.send(data);
  })
-
 
  app.get("/:id",async(req,res)=>{
 
