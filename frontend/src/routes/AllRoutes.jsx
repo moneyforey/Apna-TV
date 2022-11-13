@@ -24,7 +24,10 @@ const AllRoutes = () => {
         path="/"
         element={
           <>
+<<<<<<< HEAD
+=======
             <Navbar />
+>>>>>>> main
             <Home />
           </>
         }
@@ -32,6 +35,8 @@ const AllRoutes = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<SignUP />} />
       <Route path="/buy" element={<BuyPlans />} />
+<<<<<<< HEAD
+=======
       <Route path="/admin" element={<Admin />}>
         <Route path="/admin/allUsers" element={<AdminUsers />} />
         <Route path="/admin/:id" element={<AdminSingle/>} />
@@ -40,10 +45,14 @@ const AllRoutes = () => {
         <Route path="/admin/update/:id" element={<AdminAdd/>}/>
         <Route index   element={<AdminMovies />} />
       </Route>
+>>>>>>> main
     </Routes>
   );
 };
 
+<<<<<<< HEAD
+export default AllRoutes;
+=======
 
      
         
@@ -51,3 +60,4 @@ const AllRoutes = () => {
 
 export default AllRoutes;
 
+>>>>>>> main
