@@ -5,10 +5,6 @@ const jwt = require("jsonwebtoken");
 const userRoute = express.Router();
 const sceretkey = "qwertyuiop"
 
-userRoute.get("/", (req, res)=>{
-    res.send("hello")
-})
-
 
  userRoute.post("/", async (req, res)=>{
      const {email, password} = req.body;

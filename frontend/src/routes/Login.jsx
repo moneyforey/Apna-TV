@@ -16,7 +16,7 @@ export const Login = ()=>{
 
 
     const {token, loading, error}  = useSelector((store)=> store.auth)
-      console.log(token, loading, error)
+      // console.log(token, loading, error)
     const handleLogin = ()=>{
              if(email && password){
               let user = {
@@ -49,7 +49,7 @@ export const Login = ()=>{
 
 
     return(
-    <>
+    <div>
             <Box bg="#0f0617" color="white" >
             <div> 
                    <Link to="/"> <AiOutlineClose style={{position: "fixed", top: "20px" , right: "20px", cursor: "pointer"}} /></Link>
@@ -100,6 +100,6 @@ export const Login = ()=>{
                             </Box> 
          
             </Box>
-      </>
+      </div>
     )
 }
