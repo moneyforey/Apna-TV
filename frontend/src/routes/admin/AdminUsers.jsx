@@ -38,7 +38,7 @@ const AdminUsers = () => {
 
 
   const getUsers = async () => {
-    let res = await axios.get("http://localhost:8080/movieadmin/users");
+    let res = await axios.get("https://zeebackend-production.up.railway.app/movieadmin/users");
     console.log(res.data);
     setUsers(res.data);
   };
@@ -48,7 +48,7 @@ const AdminUsers = () => {
 
   const deleteUsers = async (id) => {
     let res = await axios.delete(
-      `http://localhost:8080/movieadmin/users/${id}`
+      `https://zeebackend-production.up.railway.app/movieadmin/users/${id}`
     );
     getUsers();
   };

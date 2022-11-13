@@ -10,7 +10,7 @@ const AdminMovies = () => {
   const [data,setData]=useState([])
   
   const getMovies=async()=>{
-    let res=await axios.get("http://localhost:8080/movieadmin")
+    let res=await axios.get("https://zeebackend-production.up.railway.app/movieadmin")
     console.log(res.data)
     setData(res.data)
 
@@ -21,7 +21,7 @@ getMovies()
   },[])
 
   const deleteMovies=async(id)=>{
-    let res=await axios.delete(`http://localhost:8080/movieadmin/${id}`)
+    let res=await axios.delete(`https://zeebackend-production.up.railway.app/movieadmin/${id}`)
     getMovies()
   }
   return (

@@ -1,0 +1,23 @@
+.bxtxt{
+    width: 50%;
+    color: aliceblue;
+    font-family: NotoSansBold, sans-serif;;
+}
+.flxvd{
+  padding: 1rem;
+  align-items: center;
+}
+
+.flxrd{
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flxim{
+    align-items: center;
+    gap: 1rem;
+}
+
+.flxmn{
+    align-items: center;
+}

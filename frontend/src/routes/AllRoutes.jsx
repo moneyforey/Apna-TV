@@ -10,7 +10,9 @@ import ModalUsers from "./admin/ModalUsers";
 
 
 import BuyPlans from "./BuyPlan";
-import DetailPage from "./DetailPage";
+import DetailPop from "./DetailPop";
+import DetailTop from "./DetailTop";
+import DetailUp from "./DetailUp";
 
 import Home from "./Home";
 import { Login } from "./Login";
@@ -29,6 +31,7 @@ const AllRoutes = () => {
             </div>
         }
       />
+      {/* <Route path="/detail" element={<DetailPage/>}/> */}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<SignUP />} />
       <Route path="/buy" element={
@@ -38,6 +41,29 @@ const AllRoutes = () => {
           <Footer />
         </div>
       } />
+
+      <Route path="/detailpop/:id" element={
+        <div>
+          <Navbar/>
+          <DetailPop/>
+          <Footer/>
+        </div>
+      }/>
+      <Route path="/detailtop/:id" element={
+        <div>
+          <Navbar/>
+          <DetailTop/>
+          <Footer/>
+        </div>
+      }/>
+
+<Route path="/detailup/:id" element={
+        <div>
+          <Navbar/>
+          <DetailUp/>
+          <Footer/>
+        </div>
+      }/>
 
         <Route path="/admin" element={<Admin />}>
         <Route path="/admin/allUsers" element={<AdminUsers />} />
