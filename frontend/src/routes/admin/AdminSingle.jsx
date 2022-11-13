@@ -9,7 +9,7 @@ const AdminSingle = () => {
     const [data,setData]=useState([])
     const {id}=useParams()
     const getMovies=async(id)=>{
-      let res=await axios.get(`http://localhost:8080/movieadmin/${id}`)
+      let res=await axios.get(`https://zeebackend-production.up.railway.app/movieadmin/${id}`)
       console.log("single",res.data)
       setData(res.data)
   
