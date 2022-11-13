@@ -49,8 +49,13 @@ export const Login = ()=>{
 
 
     return(
-      <div> 
-            <Box  bg="#0f0617" color="white" >
+
+    <div style={{backgroundColor: "#0f0617" ,
+                  height: "100vh"
+    }}>
+
+
+            <Box bg="#0f0617" color="white" >
             <div> 
                    <Link to="/"> <AiOutlineClose style={{position: "fixed", top: "20px" , right: "20px", cursor: "pointer"}} /></Link>
                    </div>
@@ -83,7 +88,7 @@ export const Login = ()=>{
                                 <Input placeholder='Email' mb="20px" onChange={(e)=> setEmail(e.target.value)} value={email} focusBorderColor="none" borderTop={"0"} borderLeft="0" borderRadius={"0"} borderRight="0" type="text" w="25%" required />
                                 <br />
                                 {
-                                   email.split("").includes("@")   &&  <Input placeholder='Password' onChange={(e)=> setPassword(e.target.value)} value={password} focusBorderColor="none"   borderTop={"0"} borderLeft="0" borderRadius={"0"} borderRight="0" type="text" w="25%" required />
+                                   email.split("").includes("@")   &&  <Input placeholder='Password' onChange={(e)=> setPassword(e.target.value)} value={password} focusBorderColor="none"   borderTop={"0"} borderLeft="0" borderRadius={"0"} borderRight="0" type="password" w="25%" required />
                                 }
                                 <Box mt="35px" mb="25px">
                                     <Text color="#a785ff">Forget Password ?</Text>
