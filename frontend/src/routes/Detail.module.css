@@ -5,6 +5,7 @@
 }
 .flxvd{
   padding: 1rem;
+  align-items: center;
 }
 
 .flxrd{
@@ -15,4 +16,8 @@
 .flxim{
     align-items: center;
     gap: 1rem;
+}
+
+.flxmn{
+    align-items: center;
 }
