@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./Cards.module.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { Box, Heading, Stack, Feature, Image, Text } from "@chakra-ui/react";
 // import { Carousel } from "react-responsive-carousel";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -45,6 +46,7 @@ function PopularMovies() {
             >
               {data.map((el) => {
                 return (
+                 <Link to={`/detailpop/${el._id}`}>
                   <Box className={styles.card}>
                     <img className="d-block w-100" src={el.poster_path} />;
                     <Box className={styles.cardoverlay}>
@@ -52,6 +54,7 @@ function PopularMovies() {
                       <button className={styles.cardBtn}>Watch</button>
                     </Box>
                   </Box>
+                 </Link>
                 );
               })}
             </Carousel>
