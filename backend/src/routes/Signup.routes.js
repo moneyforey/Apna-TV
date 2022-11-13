@@ -59,7 +59,7 @@ const sendMail  = (email, name)=>{
               
               Welcome !!!
 
-              You Succesfully register to Our Website Happy to use Apne TV 
+              You Succesfully register to Our Website Happy to use Apna TV 
 
             Apne TV
                

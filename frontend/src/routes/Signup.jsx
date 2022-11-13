@@ -33,13 +33,20 @@ import { signUp } from '../store/signup/sign.action';
  
     const handleSignUp = ()=>{
           // console.log(userSignup)
-         dispatch(signUp(userSignup))
+         dispatch(signUp(userSignup));
+         setUsersingUp({
+          name: "",
+          email: "",
+          password: "",
+         })
         }
 
 
     return(
-    
-          <Box bg="#0f0617" color="white" >
+    <div style={{backgroundColor: "#0f0617" ,
+    height: "100vh"
+}}>
+          <Box bg="#0f0617" color="white"  >
             <div> 
                   <Link to="/">  <AiOutlineClose style={{position: "fixed", top: "20px" , right: "20px", cursor: "pointer"}} /></Link>
                    </div>
@@ -82,6 +89,6 @@ import { signUp } from '../store/signup/sign.action';
                             </Box> 
          
             </Box>
-
+            </div>
     )
    }
