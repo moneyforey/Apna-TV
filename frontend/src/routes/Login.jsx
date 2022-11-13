@@ -49,8 +49,8 @@ export const Login = ()=>{
 
 
     return(
-    <div>
-            <Box bg="#0f0617" color="white" >
+      <div> 
+            <Box  bg="#0f0617" color="white" >
             <div> 
                    <Link to="/"> <AiOutlineClose style={{position: "fixed", top: "20px" , right: "20px", cursor: "pointer"}} /></Link>
                    </div>
@@ -100,6 +100,6 @@ export const Login = ()=>{
                             </Box> 
          
             </Box>
-      </div>
+            </div>
     )
 }

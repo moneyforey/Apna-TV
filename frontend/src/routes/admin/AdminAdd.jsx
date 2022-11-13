@@ -28,7 +28,7 @@ useEffect(() => {
 }, [id]);
 
 const singleupdate=async()=>{
-const res=await axios.get(`http://localhost:8080/movieadmin/${id}`)
+const res=await axios.get(`https://zeebackend-production.up.railway.app/movieadmin/${id}`)
 console.log(res.data)
 setMovie(res.data)
 
@@ -36,7 +36,7 @@ setMovie(res.data)
 }
 
 const updateMovie = async (data, id) => {
-  const res = await axios.patch(`http://localhost:8080/movieadmin/${id}`, data);
+  const res = await axios.patch(`https://zeebackend-production.up.railway.app/movieadmin/${id}`, data);
  
 };
 
@@ -54,7 +54,7 @@ const updateMovie = async (data, id) => {
   };
 
   const addMovie=(data)=>{
-    let res=axios.post("http://localhost:8080/movieadmin/",data)
+    let res=axios.post("https://zeebackend-production.up.railway.app/movieadmin/",data)
   }
 
   const handleSubmit=(e)=>{

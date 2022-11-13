@@ -23,14 +23,14 @@ const ModalUsers = () => {
   }, [id]);
   
   const singleupdate=async()=>{
-  const res=await axios.get(`http://localhost:8080/movieadmin/users/${id}`)
+  const res=await axios.get(`https://zeebackend-production.up.railway.app/movieadmin/users/${id}`)
  
   setState(res.data)
   }
 
 
   const updateUser = async (data, id) => {
-    const res = await axios.patch(`http://localhost:8080/movieadmin/users/${id}`, data);
+    const res = await axios.patch(`https://zeebackend-production.up.railway.app/movieadmin/users/${id}`, data);
    
   };
 
