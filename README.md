@@ -1,11 +1,39 @@
-# loutish-hands-8677
+
+# Apna Tv
+
 Apna TV is a movie website that have movies and web series around the world in many languages.
 
-#Tech Stack :- 
-ReactJs
-Redux
-Redux-thunk
-Chakra UI
-Node js
-Express
-MongoDB
+
+## Tech Stack
+
+**Client:** React, Redux, ,Redux-thunk ,Chakra UI
+
+**Server:** Node, Express, MongoDB, Nodemailer
+
+
+## Features
+
+- Login/Register Authentications
+- video Player with Fullscreen mode as well
+- Admin to manage all the data on platform
+- Nodemailer
+
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+## Authors
+
+- [Manish Faujdar](https://github.com/moneyforey)
+- [Rohit Yadav](https://github.com/rohity0)
+- [Pravhat Ray](https://github.com/pravhatray)
+- [Lokesh Ahire](https://github.com/lokeshahire)
+
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at moneyforey786@gmail.com
+
