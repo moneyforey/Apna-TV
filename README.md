@@ -6,6 +6,7 @@ Apna TV is a movie website that have movies and web series around the world in m
 ## Deploy Links
 - [Frontend](apnatv.vercel.app/)
 - [Backend](https://zeebackend-production.up.railway.app)
+- [Admin](https://apnatv.vercel.app/admin)
 
 ## Tech Stack
 
